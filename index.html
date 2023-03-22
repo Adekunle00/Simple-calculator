@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+	
+	@media only screen and (min-width: 300px){}
+	body{
+	   
+	    background:white;
+	    text-align:center;
+	    width:320px;
+	    padding:10px;
+	    margin:15px;
+	    
+	}
+		@media only screen and (min-width: 300px){}
+	table{
+	      background:#3D3D3D;
+	      padding:25px;
+	      box-shadow: 0px 2px 3px 4px;
+	      border-radius:10px;
+	      height:170px;
+	      width:320px;
+	      margin-bottom:30px;
+	      padding-top:80px;
+	      padding-top-color:white;
+	      
+	}
+	     @media only screen and (min-width: 300px){}
+		input[type="button"] {
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			margin: 5px;
+		}
+		@media only screen and (min-width: 300px){}
+		input[type="text"] {
+			width: 212px;
+			height: 50px;
+			font-size: 60px;
+		}
+		@media only screen and (min-width: 300px){}
+		.equal{
+		       width:200px;	
+		       background:yellow;           
+		       padding: 2px 130px 2px 120px;
+		       border-radius:10px;
+		       font-weight:20px;
+		}
+		@media only screen and (min-width: 300px){}
+		.value{
+		       font-size:45px;
+		       font-weight:bold;
+		       
+		       
+		       border-radius:8px;
+		       box-shadow:1px 1px 1px 1px grey;
+		}
+		@media only screen and (min-width: 300px){}
+		#result{
+		        border-radius:20px;
+		        padding:0px 20px;
+		        color:white;
+		        font-size:30px;
+		        background:#B3BDB1;
+		}
+		@media only screen and (min-width: 300px){}
+		.page{
+		   display:inline-block;
+		   color:grey;
+		   text-align:center;
+		   
+		 
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="4">
+				<input type="text" id="result" disabled >
+			</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="input('7')"class="value"></td>
+			<td><input type="button" value="8" onclick="input('8')"class="value"></td>
+			<td><input type="button" value="9" onclick="input('9')"class="value"></td>
+			<td><input type="button" value="/" onclick="input('/')"class="value"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="input('4')"class="value"></td>
+			<td><input type="button" value="5" onclick="input('5')"class="value"></td>
+			<td><input type="button" value="6" onclick="input('6')"class="value"></td>
+			<td><input type="button" value="*" onclick="input('*')"class="value"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" onclick="input('1')"class="value"></td>
+			<td><input type="button" value="2" onclick="input('2')"class="value"></td>
+			<td><input type="button" value="3" onclick="input('3')"class="value"></td>
+			<td><input type="button" value="-" onclick="input('-')"class="value"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="0" onclick="input('0')"class="value"></td>
+			<td><input type="button" value="." onclick="input('.')"class="value"></td>
+			<td><input type="button" value="C" onclick="clearInput()"class="value"></td>
+			<td><input type="button" value="+" onclick="input('+')"class="value"></td>
+		</tr>
+		<tr>
+			<td colspan="4"><input type="button"class="equal" value="=" onclick="calculate()"></td>
+		</tr>
+	</table>
+       
+           
+	<script type="text/javascript">
+		function input(value) {
+			document.getElementById("result").value += value;
+		}
+
+		function clearInput() {
+			document.getElementById("result").value = "";
+		}
+
+		function calculate() {
+			var result = eval(document.getElementById("result").value);
+			document.getElementById("result").value = result;
+		}
+	</script>
+	
+	<p class="page">Hamsat-Calculator: I built this simple calculator for my company's account department</p>
+	
+</body>
+</html>
